@@ -6,7 +6,13 @@ This project aims at helping you to run your codes in your server with editing t
 
 ## Usage
 
-Firstly you need to set up everything about docker. After that, grant the script with execution permission.
+Firstly you need to set up everything about docker. Then build the image. 
+
+```bash
+docker build -t lsyncd .
+```
+
+After that, grant the script with execution permission.
 
 ```bash
 chmod +x mysync
