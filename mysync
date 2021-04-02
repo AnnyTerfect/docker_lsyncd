@@ -1,0 +1,12 @@
+#!/bin/sh
+
+TARGET=$1
+
+docker rm -f lsyncd
+
+docker run -dit \
+--rm \
+--name lsyncd \
+-v ~/.ssh:/root/.ssh:ro \
+-v $PWD:/sync \
+lsyncd -rsync /sync/ $TARGET
